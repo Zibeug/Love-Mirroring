@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\Thermit\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Thermit\\.nuget\\packages"
-    ]
-  }
-}
