@@ -6,5 +6,6 @@
   <PropertyGroup>
     <ActiveDebugProfile>SelfHost</ActiveDebugProfile>
     <NameOfLastUsedPublishProfile>LoveMirroring-ID4 - Web Deploy</NameOfLastUsedPublishProfile>
+    <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
 </Project>
