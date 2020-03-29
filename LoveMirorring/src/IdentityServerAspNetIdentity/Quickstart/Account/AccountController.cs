@@ -105,9 +105,17 @@ namespace IdentityServer4.Quickstart.UI
             if (ModelState.IsValid)
             {
                 var result = await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberLogin, lockoutOnFailure: true);
+                
                 if (result.Succeeded)
                 {
                     var user = await _userManager.FindByNameAsync(model.Username);
+                    var result2 = await _userManager.IsEmailConfirmedAsync(user);
+
+                    if (!result2)
+                    {
+                        return Redirect("https://etml.ch");
+                    }
+
                     await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id, user.UserName, clientId: context?.ClientId));
 
                     if (context != null)

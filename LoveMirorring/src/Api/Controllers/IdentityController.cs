@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel;
 
 namespace Api.Controllers
 {
@@ -19,4 +20,6 @@ namespace Api.Controllers
             return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
         }
     }
+
+    
 }
