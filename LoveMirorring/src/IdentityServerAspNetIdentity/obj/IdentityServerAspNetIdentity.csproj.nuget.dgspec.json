@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {}
+    "C:\\DEV\\Love-Mirroring\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {
+    "C:\\DEV\\Love-Mirroring\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
+        "projectUniqueName": "C:\\DEV\\Love-Mirroring\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
         "projectName": "IdentityServerAspNetIdentity",
-        "projectPath": "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
-        "packagesPath": "C:\\Users\\Thermit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\obj\\",
+        "projectPath": "C:\\DEV\\Love-Mirroring\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\IdentityServerAspNetIdentity.csproj",
+        "packagesPath": "C:\\Users\\zibeu\\.nuget\\packages\\",
+        "outputPath": "C:\\DEV\\Love-Mirroring\\LoveMirorring\\src\\IdentityServerAspNetIdentity\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Thermit\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\zibeu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -70,6 +74,14 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.13.1, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[3.2.0, )"
@@ -97,7 +109,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

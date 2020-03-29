@@ -4,9 +4,11 @@
 
 using IdentityServerAspNetIdentity.Data;
 using IdentityServerAspNetIdentity.Models;
+using IdentityServerAspNetIdentity.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -112,6 +114,12 @@ namespace IdentityServerAspNetIdentity
                 });
 
             //SeedData.EnsureSeedData(Configuration.GetConnectionString("DefaultConnection"));
+
+            // requires
+            // using Microsoft.AspNetCore.Identity.UI.Services;
+            // using WebPWrecover.Services;
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.Configure<AuthMessageSenderOptions>(Configuration);
         }
 
         public void Configure(IApplicationBuilder app)
