@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u1acJH1HlFj3/bjTinLfLHEawtLz54vQUm0WmPdRoZ1A1RikeaFZXdO2VkC1xxBiBSJekAHn4/Qk9tpKzAjGsw==",
+  "dgSpecHash": "BFQnT84GcoRRDUhTtsbcsPx2Jkl57yk45Kx01TZT6MB8UfDGQTficqLLoqVaeYk3aad7DH0lsncgrJyXOC+t+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\Api\\Api.csproj",
+  "projectFilePath": "C:\\repositories\\Love-Mirroring\\LoveMirorring\\src\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thermit\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.2\\microsoft.aspnetcore.authentication.jwtbearer.3.1.2.nupkg.sha512",
     "C:\\Users\\Thermit\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

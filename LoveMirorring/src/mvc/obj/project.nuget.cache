@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CXQH8IhGuegc1huC7FluBSC8jk9K/RfBouqNFVHWOs36+5Uf72Xl0hcALpH2oADwroOCYLbC3tTNqBxZZS/ouw==",
+  "dgSpecHash": "Vdeo4XROv6zrhJhOV2m3X6yA09SPOrU0xHg/TdZxOLMaRUNilZTIHPBOYFHq4e2esvgimQpeolh+TPs9yGR1YA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thermit\\Desktop\\LoveMirorring\\src\\mvc\\mvc.csproj",
+  "projectFilePath": "C:\\repositories\\Love-Mirroring\\LoveMirorring\\src\\mvc\\mvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thermit\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.1.2\\microsoft.aspnetcore.authentication.openidconnect.3.1.2.nupkg.sha512",
     "C:\\Users\\Thermit\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
