@@ -1,3 +1,9 @@
 Server=nnamella.ch;Database=LoveMirroring;User Id=Azure;Password=Lovemirroringsht7;MultipleActiveResultSets=true
 
 Clé API Email : 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
+
+
+{
+  "SendGridUser": "LoveMirroring",
+  "SendGridKey": "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"
+}
