@@ -6,7 +6,7 @@
     ViewData["Title"] = "Matching";
 }
 
-<h1>Matching</h1>
+ <h1>@ViewData["Title"]</h1>
 <br />
 
 <div class="row">
@@ -14,11 +14,12 @@
         <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h4>Quel type de personnes cherchez vous?</h4>
             <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Input.Sexe"></label><br />
                 @foreach (var sexe in Model.Sexes)
                 {
-                    <input asp-for="Input.Sexe" type="radio" value="@sexe.SexeId" />
+                    <input asp-for="Input.Sexe" type="radio" value="@sexe.SexeName" />
                     <label asp-for="Input.Sexe">@sexe.SexeName</label><br />
                     <span asp-validation-for="Input.Sexe" class="text-danger"></span>
                 }
