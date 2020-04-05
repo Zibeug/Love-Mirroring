@@ -65,9 +65,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                @foreach (var item in Model.Choices.UsersChoices)
-                {
+
+            @foreach (var item in Model.Choices.UsersChoices)
+            {
+                <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.UserName)
                     </td>
@@ -84,8 +85,9 @@
                             <a asp-action="Like" asp-route-id="@item>Like</a>
                             <a asp-action="Like" asp-route-id="@item>Unlike</a>|
                         </td>*@
-                }
-            </tr>
+                </tr>
+            }
+
         </tbody>
     </table>
 }

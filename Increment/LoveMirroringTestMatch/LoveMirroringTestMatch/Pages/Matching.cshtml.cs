@@ -54,16 +54,13 @@ namespace LoveMirroringTestMatch
             
         }
 
-        //public async Task<MatchingController.UsersChoicesViewModel> OnPostAsync(string returnUrl = null)
+        //public async Task OnPostAsync(string returnUrl = null)
         //{
         //    ReturnUrl = returnUrl;
         //    Choices = await _matchingController.GetUsersChoice(Input.Sexe, Input.Age, Input.Profil);
-        //    return Choices;
-
-
         //}
 
-        public async Task<UsersChoicesViewModel> OnPostSearchAsync(string sexe, int agemax, string profil)
+        public async Task OnPostSearchAsync(string sexe, int agemax, string profil)
         {
             var usersChoices = from u in await _context.AspNetUsers.ToListAsync()
                                where u.Birthday.Year - DateTime.Now.Year <= agemax
@@ -75,7 +72,6 @@ namespace LoveMirroringTestMatch
                                select new UserChoiceViewModel { UserName = u.UserName, Age = agemax, Sexe = s.SexeName, Profil = p.ProfilName };
 
             Choices = new UsersChoicesViewModel { UsersChoices = usersChoices };
-            return Choices;
         }
 
 
