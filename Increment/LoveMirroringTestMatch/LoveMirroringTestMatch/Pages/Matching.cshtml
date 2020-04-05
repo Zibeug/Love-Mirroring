@@ -1,0 +1,93 @@
+﻿@page
+@model LoveMirroringTestMatch.MatchingModel
+
+
+@{
+    ViewData["Title"] = "Matching";
+}
+
+<h1>Matching</h1>
+<br />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <h4>Quel type de personnes cherchez vous?</h4>
+            <hr />
+            <div class="form-group">
+                <label asp-for="Input.Sexe"></label><br />
+                @foreach (var sexe in Model.Sexes)
+                {
+                    <input asp-for="Input.Sexe" type="radio" value="@sexe.SexeId" />
+                    <label asp-for="Input.Sexe">@sexe.SexeName</label><br />
+                    <span asp-validation-for="Input.Sexe" class="text-danger"></span>
+                }
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Age"></label>
+                <input type="number" asp-for="Input.Age" class="form-control" min="18" max="100" />
+                <span asp-validation-for="Input.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Profil"></label><br />
+                @foreach (var profil in Model.Profils)
+                {
+                    <input asp-for="Input.Profil" type="radio" value="@profil.ProfilName" />
+                    <label asp-for="Input.Profil">@profil.ProfilName</label><br />
+                    <span asp-validation-for="Input.Profil" class="text-danger"></span>
+                }
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Chercher</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@if (Model.Choices != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Utilisateur
+                </th>
+                <th>
+                    Type de profile
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    Sexe
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @foreach (var item in Model.Choices.UsersChoices)
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Profil)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Age)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sexe)
+                    </td>
+                    @*<td>
+                            <a asp-action="Like" asp-route-id="@item>Like</a>
+                            <a asp-action="Like" asp-route-id="@item>Unlike</a>|
+                        </td>*@
+                }
+            </tr>
+        </tbody>
+    </table>
+}
+
+
