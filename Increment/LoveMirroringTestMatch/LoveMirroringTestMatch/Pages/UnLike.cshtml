@@ -1,0 +1,22 @@
+﻿@page "{id}"
+@model LoveMirroringTestMatch.UnLikeModel
+@{
+    ViewData["Title"] = "UnLike";
+}
+
+<h1>UnLike</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <div asp-validation-summary="All" class="text-danger">@Model.Error</div>
+            <form asp-page-handler="Confirmer" method="post">
+                <button class="btn btn-primary">Confirmer UnLike</button>
+            </form>
+        </div>
+        <div>
+            <a asp-page-handler="Matching">Retour à la liste</a>
+        </div>
+    </div>
+</div>
+

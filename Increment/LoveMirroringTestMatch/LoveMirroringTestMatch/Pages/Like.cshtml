@@ -1,0 +1,35 @@
+﻿@page "{id}"
+@model LoveMirroringTestMatch.LikeModel
+@{
+    ViewData["Title"] = "Like";
+}
+
+<h1>Like</h1>
+
+
+<div class="row">
+    <div class="col-md-4">
+
+        <h4>Profil choisie</h4>
+        <hr />
+        <div class="list-group">
+            <div asp-validation-summary="All" class="text-danger">@Model.Error</div>
+            <label asp-for="SearchUser"></label><br />
+            <p>Nom : @Model.SearchUser.UserName</p>
+            <p>Age : @Model.SearchUser.Age</p>
+        </div>
+        <div class="form-group">
+            <form asp-page-handler="Confirmer" method="post">
+                <button class="btn btn-primary">Confirmer Like</button>
+            </form>
+        </div>
+        <div>
+            <a asp-page-handler="Matching">Retour à la liste</a>
+        </div>
+        <div>
+            <a asp-page-handler="UnLike">UnLike</a>
+        </div>
+    </div>
+</div>
+
+
