@@ -9,6 +9,7 @@ namespace LoveMirroringTestMatch.Models
         public string Id { get; set; }
         public short TalkId { get; set; }
         public DateTime MessageDate { get; set; }
+        public string MessageText { get; set; }
 
         public virtual AspNetUsers IdNavigation { get; set; }
         public virtual Talks Talk { get; set; }

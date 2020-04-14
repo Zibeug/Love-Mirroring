@@ -7,12 +7,12 @@ namespace LoveMirroringTestMatch.Models
     {
         public Religions()
         {
-            PreferencesReligions = new HashSet<PreferencesReligions>();
+            PreferenceReligions = new HashSet<PreferenceReligions>();
         }
 
         public short ReligionId { get; set; }
         public string ReligionName { get; set; }
 
-        public virtual ICollection<PreferencesReligions> PreferencesReligions { get; set; }
+        public virtual ICollection<PreferenceReligions> PreferenceReligions { get; set; }
     }
 }

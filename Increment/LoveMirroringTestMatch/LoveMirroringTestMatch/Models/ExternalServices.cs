@@ -7,13 +7,13 @@ namespace LoveMirroringTestMatch.Models
     {
         public ExternalServices()
         {
-            UsersExternalServices = new HashSet<UsersExternalServices>();
+            UserExternalServices = new HashSet<UserExternalServices>();
         }
 
         public short ExternalServiceId { get; set; }
         public string ExternalServiceName { get; set; }
         public bool ExternalServiceStatus { get; set; }
 
-        public virtual ICollection<UsersExternalServices> UsersExternalServices { get; set; }
+        public virtual ICollection<UserExternalServices> UserExternalServices { get; set; }
     }
 }

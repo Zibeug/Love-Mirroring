@@ -9,7 +9,7 @@ namespace LoveMirroringTestMatch.Models
         public override string UserId { get; set; }
         public override string RoleId { get; set; }
 
-        public virtual AspNetRoles Role { get; set; }
-        public virtual AspNetUsers User { get; set; }
+        public virtual AspNetRoles User { get; set; }
+        public virtual AspNetUsers UserNavigation { get; set; }
     }
 }

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class UsersExternalServices
+    public partial class UserNewsletters
     {
-        public short ExternalServiceId { get; set; }
+        public short NewsletterId { get; set; }
         public string Id { get; set; }
 
-        public virtual ExternalServices ExternalService { get; set; }
         public virtual AspNetUsers IdNavigation { get; set; }
+        public virtual Newsletters Newsletter { get; set; }
     }
 }

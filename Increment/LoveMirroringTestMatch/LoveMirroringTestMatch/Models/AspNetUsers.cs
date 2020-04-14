@@ -14,17 +14,25 @@ namespace LoveMirroringTestMatch.Models
             AspNetUserTokens = new HashSet<AspNetUserTokens>();
             Messages = new HashSet<Messages>();
             Pictures = new HashSet<Pictures>();
+            Preferences = new HashSet<Preferences>();
             TalksIdNavigation = new HashSet<Talks>();
-            TalksIdUser2TalksNavigation = new HashSet<Talks>();
-            UsersExternalServices = new HashSet<UsersExternalServices>();
-            UsersMatchId1Navigation = new HashSet<UsersMatch>();
-            UsersMatchIdNavigation = new HashSet<UsersMatch>();
-            UsersNewsLetters = new HashSet<UsersNewsLetters>();
-            UsersPreferences = new HashSet<UsersPreferences>();
-            UsersProfils = new HashSet<UsersProfils>();
+            TalksIdUser2TalkNavigation = new HashSet<Talks>();
+            UserExternalServices = new HashSet<UserExternalServices>();
+            UserLikesId1Navigation = new HashSet<UserLikes>();
+            UserLikesIdNavigation = new HashSet<UserLikes>();
+            UserMusics = new HashSet<UserMusics>();
+            UserNewsletters = new HashSet<UserNewsletters>();
+            UserProfils = new HashSet<UserProfils>();
+            UserStyles = new HashSet<UserStyles>();
         }
 
         public override string Id { get; set; }
+        public short? HairColorId { get; set; }
+        public short? CorpulenceId { get; set; }
+        public short? SexeId { get; set; }
+        public short? HairSizeId { get; set; }
+        public short? SubscriptionId { get; set; }
+        public short? SexualityId { get; set; }
         public override int AccessFailedCount { get; set; }
         public override string ConcurrencyStamp { get; set; }
         public override string Email { get; set; }
@@ -43,10 +51,12 @@ namespace LoveMirroringTestMatch.Models
         public string Firstname { get; set; }
         public string LastName { get; set; }
         public bool QuizCompleted { get; set; }
-        public short SexeId { get; set; }
-        public short? SubscriptionId { get; set; }
 
+        public virtual Corpulences Corpulence { get; set; }
+        public virtual HairColor HairColor { get; set; }
+        public virtual HairSizes HairSize { get; set; }
         public virtual Sexes Sexe { get; set; }
+        public virtual Sexualities Sexuality { get; set; }
         public virtual Subscriptions Subscription { get; set; }
         public virtual ICollection<AspNetUserClaims> AspNetUserClaims { get; set; }
         public virtual ICollection<AspNetUserLogins> AspNetUserLogins { get; set; }
@@ -54,13 +64,15 @@ namespace LoveMirroringTestMatch.Models
         public virtual ICollection<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual ICollection<Messages> Messages { get; set; }
         public virtual ICollection<Pictures> Pictures { get; set; }
+        public virtual ICollection<Preferences> Preferences { get; set; }
         public virtual ICollection<Talks> TalksIdNavigation { get; set; }
-        public virtual ICollection<Talks> TalksIdUser2TalksNavigation { get; set; }
-        public virtual ICollection<UsersExternalServices> UsersExternalServices { get; set; }
-        public virtual ICollection<UsersMatch> UsersMatchId1Navigation { get; set; }
-        public virtual ICollection<UsersMatch> UsersMatchIdNavigation { get; set; }
-        public virtual ICollection<UsersNewsLetters> UsersNewsLetters { get; set; }
-        public virtual ICollection<UsersPreferences> UsersPreferences { get; set; }
-        public virtual ICollection<UsersProfils> UsersProfils { get; set; }
+        public virtual ICollection<Talks> TalksIdUser2TalkNavigation { get; set; }
+        public virtual ICollection<UserExternalServices> UserExternalServices { get; set; }
+        public virtual ICollection<UserLikes> UserLikesId1Navigation { get; set; }
+        public virtual ICollection<UserLikes> UserLikesIdNavigation { get; set; }
+        public virtual ICollection<UserMusics> UserMusics { get; set; }
+        public virtual ICollection<UserNewsletters> UserNewsletters { get; set; }
+        public virtual ICollection<UserProfils> UserProfils { get; set; }
+        public virtual ICollection<UserStyles> UserStyles { get; set; }
     }
 }

@@ -28,10 +28,10 @@ namespace LoveMirroringTestMatch
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddDbContext<LoveMirroringContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
+            services.AddDbContext<LoveMirroringDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
             services.AddIdentity<AspNetUsers, AspNetRoles>(
             options => options.Stores.MaxLengthForKeys = 128)
-            .AddEntityFrameworkStores<LoveMirroringContext>()
+            .AddEntityFrameworkStores<LoveMirroringDbContext>()
             .AddDefaultUI()
             .AddDefaultTokenProviders();
 

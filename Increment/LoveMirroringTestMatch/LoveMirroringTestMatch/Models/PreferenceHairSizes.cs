@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class PreferencesStyles
+    public partial class PreferenceHairSizes
     {
         public short PreferenceId { get; set; }
-        public short StyleId { get; set; }
+        public short HairSizeId { get; set; }
 
+        public virtual HairSizes HairSize { get; set; }
         public virtual Preferences Preference { get; set; }
-        public virtual Styles Style { get; set; }
     }
 }

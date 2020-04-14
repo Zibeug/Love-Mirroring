@@ -12,10 +12,10 @@ namespace LoveMirroringTestMatch
 {
     public class LikeModel : PageModel
     {
-        private readonly LoveMirroringContext _context;
+        private readonly LoveMirroringDbContext _context;
         private readonly UserManager<AspNetUsers> _userManager;
 
-        public LikeModel(LoveMirroringContext context, UserManager<AspNetUsers> userManager)
+        public LikeModel(LoveMirroringDbContext context, UserManager<AspNetUsers> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -39,8 +39,8 @@ namespace LoveMirroringTestMatch
                                        select u.Id).FirstOrDefault();
                 string currentUserId = _userManager.GetUserId(User);
 
-                UsersMatch usersMatch = new UsersMatch { Id = currentUserId, Id1 = searchUserId };
-                _context.UsersMatch.Add(usersMatch);
+                UserLikes usersMatch = new UserLikes { Id = currentUserId, Id1 = searchUserId };
+                _context.UserLikes.Add(usersMatch);
                 _context.SaveChanges();
             }
             catch (Exception)

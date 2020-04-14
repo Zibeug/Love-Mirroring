@@ -7,12 +7,14 @@ namespace LoveMirroringTestMatch.Models
     {
         public Corpulences()
         {
-            PreferencesCorpulences = new HashSet<PreferencesCorpulences>();
+            AspNetUsers = new HashSet<AspNetUsers>();
+            PreferenceCorpulences = new HashSet<PreferenceCorpulences>();
         }
 
         public short CorpulenceId { get; set; }
         public string CorpulenceName { get; set; }
 
-        public virtual ICollection<PreferencesCorpulences> PreferencesCorpulences { get; set; }
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
+        public virtual ICollection<PreferenceCorpulences> PreferenceCorpulences { get; set; }
     }
 }

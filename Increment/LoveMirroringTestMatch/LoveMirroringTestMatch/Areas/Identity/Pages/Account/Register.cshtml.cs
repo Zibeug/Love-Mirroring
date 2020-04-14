@@ -24,14 +24,14 @@ namespace LoveMirroringTestMatch.Areas.Identity.Pages.Account
         private readonly UserManager<AspNetUsers> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        private readonly LoveMirroringContext _context;
+        private readonly LoveMirroringDbContext _context;
 
         public RegisterModel(
             UserManager<AspNetUsers> userManager,
             SignInManager<AspNetUsers> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            LoveMirroringContext context)
+            LoveMirroringDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;

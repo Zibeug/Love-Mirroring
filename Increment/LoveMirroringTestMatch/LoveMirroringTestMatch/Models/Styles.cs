@@ -7,12 +7,14 @@ namespace LoveMirroringTestMatch.Models
     {
         public Styles()
         {
-            PreferencesStyles = new HashSet<PreferencesStyles>();
+            PreferenceStyles = new HashSet<PreferenceStyles>();
+            UserStyles = new HashSet<UserStyles>();
         }
 
         public short StyleId { get; set; }
         public string StyleName { get; set; }
 
-        public virtual ICollection<PreferencesStyles> PreferencesStyles { get; set; }
+        public virtual ICollection<PreferenceStyles> PreferenceStyles { get; set; }
+        public virtual ICollection<UserStyles> UserStyles { get; set; }
     }
 }

@@ -12,10 +12,10 @@ namespace LoveMirroringTestMatch
 {
     public class UnLikeModel : PageModel
     {
-        private readonly LoveMirroringContext _context;
+        private readonly LoveMirroringDbContext _context;
         private readonly UserManager<AspNetUsers> _userManager;
 
-        public UnLikeModel(LoveMirroringContext context, UserManager<AspNetUsers> userManager)
+        public UnLikeModel(LoveMirroringDbContext context, UserManager<AspNetUsers> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -43,10 +43,10 @@ namespace LoveMirroringTestMatch
                                        select u.Id).FirstOrDefault();
                 string currentUserId = _userManager.GetUserId(User);
 
-                UsersMatch usersMatch = (from us in await _context.UsersMatch.ToListAsync()
+                UserLikes usersMatch = (from us in await _context.UserLikes.ToListAsync()
                                         where us.Id.Equals(currentUserId) && us.Id1.Equals(searchUserId)
                                         select us).FirstOrDefault();
-                _context.UsersMatch.Remove(usersMatch);
+                _context.UserLikes.Remove(usersMatch);
                 _context.SaveChanges();
             }
             catch (Exception)
