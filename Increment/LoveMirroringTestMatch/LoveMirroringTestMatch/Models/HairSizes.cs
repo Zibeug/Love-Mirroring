@@ -7,12 +7,14 @@ namespace LoveMirroringTestMatch.Models
     {
         public HairSizes()
         {
-            PreferencesHairSizes = new HashSet<PreferencesHairSizes>();
+            AspNetUsers = new HashSet<AspNetUsers>();
+            PreferenceHairSizes = new HashSet<PreferenceHairSizes>();
         }
 
         public short HairSizeId { get; set; }
         public string HairSizeName { get; set; }
 
-        public virtual ICollection<PreferencesHairSizes> PreferencesHairSizes { get; set; }
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
+        public virtual ICollection<PreferenceHairSizes> PreferenceHairSizes { get; set; }
     }
 }

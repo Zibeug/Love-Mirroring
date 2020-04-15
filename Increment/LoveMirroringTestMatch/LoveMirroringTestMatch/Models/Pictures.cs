@@ -7,7 +7,7 @@ namespace LoveMirroringTestMatch.Models
     {
         public Pictures()
         {
-            PicturesTags = new HashSet<PicturesTags>();
+            PictureTag = new HashSet<PictureTag>();
         }
 
         public short PictureId { get; set; }
@@ -15,6 +15,6 @@ namespace LoveMirroringTestMatch.Models
         public byte[] PictureView { get; set; }
 
         public virtual AspNetUsers IdNavigation { get; set; }
-        public virtual ICollection<PicturesTags> PicturesTags { get; set; }
+        public virtual ICollection<PictureTag> PictureTag { get; set; }
     }
 }

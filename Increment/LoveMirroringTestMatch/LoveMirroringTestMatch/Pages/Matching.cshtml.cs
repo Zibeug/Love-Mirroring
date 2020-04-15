@@ -14,10 +14,10 @@ namespace LoveMirroringTestMatch
 {
     public class MatchingModel : PageModel
     {
-        private readonly LoveMirroringContext _context;
+        private readonly LoveMirroringDbContext _context;
         private readonly UserManager<AspNetUsers> _userManager;
 
-        public MatchingModel(LoveMirroringContext context, UserManager<AspNetUsers> userManager)
+        public MatchingModel(LoveMirroringDbContext context, UserManager<AspNetUsers> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -67,7 +67,7 @@ namespace LoveMirroringTestMatch
             }
 
             var allUsersId = from u in await _context.AspNetUsers.ToListAsync() select u.Id;
-            var allUsersLikeId = from us in await _context.UsersMatch.ToListAsync() select us.Id1;
+            var allUsersLikeId = from us in await _context.UserLikes.ToListAsync() select us.Id1;
             var allUsersNotLike = allUsersId.Except(allUsersLikeId);
 
 
@@ -76,7 +76,7 @@ namespace LoveMirroringTestMatch
                                && u.Id != user.Id && allUsersNotLike.Contains(u.Id)
                                join s in await _context.Sexes.ToListAsync() on u.SexeId equals s.SexeId
                                where s.SexeName.Equals(Input.Sexe)
-                               join up in await _context.UsersProfils.ToListAsync() on u.Id equals up.Id
+                               join up in await _context.UserProfils.ToListAsync() on u.Id equals up.Id
                                join p in await _context.Profils.ToListAsync() on up.ProfilId equals p.ProfilId
                                where p.ProfilName.Equals(Input.Profil)
                                select new UserChoiceViewModel { UserName = u.UserName, Age = DateTime.Now.Year - u.Birthday.Year, Sexe = s.SexeName, Profil = p.ProfilName };;

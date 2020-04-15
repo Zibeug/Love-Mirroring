@@ -7,30 +7,27 @@ namespace LoveMirroringTestMatch.Models
     {
         public Preferences()
         {
-            PreferencesCorpulences = new HashSet<PreferencesCorpulences>();
-            PreferencesHairColors = new HashSet<PreferencesHairColors>();
-            PreferencesHairSizes = new HashSet<PreferencesHairSizes>();
-            PreferencesMusiques = new HashSet<PreferencesMusiques>();
-            PreferencesReligions = new HashSet<PreferencesReligions>();
-            PreferencesStyles = new HashSet<PreferencesStyles>();
-            ProfilsPreferences = new HashSet<ProfilsPreferences>();
-            UsersPreferences = new HashSet<UsersPreferences>();
+            PreferenceCorpulences = new HashSet<PreferenceCorpulences>();
+            PreferenceHairColors = new HashSet<PreferenceHairColors>();
+            PreferenceHairSizes = new HashSet<PreferenceHairSizes>();
+            PreferenceMusics = new HashSet<PreferenceMusics>();
+            PreferenceReligions = new HashSet<PreferenceReligions>();
+            PreferenceStyles = new HashSet<PreferenceStyles>();
         }
 
         public short PreferenceId { get; set; }
+        public string Id { get; set; }
         public short SexualityId { get; set; }
-        public bool Religions { get; set; }
-        public bool Age { get; set; }
-        public bool Corpulences { get; set; }
+        public short AgeMin { get; set; }
+        public short AgeMax { get; set; }
 
+        public virtual AspNetUsers IdNavigation { get; set; }
         public virtual Sexualities Sexuality { get; set; }
-        public virtual ICollection<PreferencesCorpulences> PreferencesCorpulences { get; set; }
-        public virtual ICollection<PreferencesHairColors> PreferencesHairColors { get; set; }
-        public virtual ICollection<PreferencesHairSizes> PreferencesHairSizes { get; set; }
-        public virtual ICollection<PreferencesMusiques> PreferencesMusiques { get; set; }
-        public virtual ICollection<PreferencesReligions> PreferencesReligions { get; set; }
-        public virtual ICollection<PreferencesStyles> PreferencesStyles { get; set; }
-        public virtual ICollection<ProfilsPreferences> ProfilsPreferences { get; set; }
-        public virtual ICollection<UsersPreferences> UsersPreferences { get; set; }
+        public virtual ICollection<PreferenceCorpulences> PreferenceCorpulences { get; set; }
+        public virtual ICollection<PreferenceHairColors> PreferenceHairColors { get; set; }
+        public virtual ICollection<PreferenceHairSizes> PreferenceHairSizes { get; set; }
+        public virtual ICollection<PreferenceMusics> PreferenceMusics { get; set; }
+        public virtual ICollection<PreferenceReligions> PreferenceReligions { get; set; }
+        public virtual ICollection<PreferenceStyles> PreferenceStyles { get; set; }
     }
 }

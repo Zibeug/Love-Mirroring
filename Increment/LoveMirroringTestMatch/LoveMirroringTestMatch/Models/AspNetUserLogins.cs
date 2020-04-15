@@ -8,8 +8,8 @@ namespace LoveMirroringTestMatch.Models
     {
         public override string LoginProvider { get; set; }
         public override string ProviderKey { get; set; }
-        public override string ProviderDisplayName { get; set; }
         public override string UserId { get; set; }
+        public override string ProviderDisplayName { get; set; }
 
         public virtual AspNetUsers User { get; set; }
     }

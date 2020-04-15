@@ -3,16 +3,17 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class NewsLetters
+    public partial class Newsletters
     {
-        public NewsLetters()
+        public Newsletters()
         {
-            UsersNewsLetters = new HashSet<UsersNewsLetters>();
+            UserNewsletters = new HashSet<UserNewsletters>();
         }
 
-        public short NewsLetterId { get; set; }
-        public string NewsLetterName { get; set; }
+        public short NewsletterId { get; set; }
+        public string NewsletterName { get; set; }
+        public bool NewsletterStatus { get; set; }
 
-        public virtual ICollection<UsersNewsLetters> UsersNewsLetters { get; set; }
+        public virtual ICollection<UserNewsletters> UserNewsletters { get; set; }
     }
 }

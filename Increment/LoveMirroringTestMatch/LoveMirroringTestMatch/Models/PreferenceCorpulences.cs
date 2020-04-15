@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class ProfilsPreferences
+    public partial class PreferenceCorpulences
     {
         public short PreferenceId { get; set; }
-        public short ProfilId { get; set; }
+        public short CorpulenceId { get; set; }
 
+        public virtual Corpulences Corpulence { get; set; }
         public virtual Preferences Preference { get; set; }
-        public virtual Profils Profil { get; set; }
     }
 }

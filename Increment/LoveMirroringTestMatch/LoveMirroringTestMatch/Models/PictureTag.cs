@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class PicturesTags
+    public partial class PictureTag
     {
         public short PictureId { get; set; }
         public short TagId { get; set; }

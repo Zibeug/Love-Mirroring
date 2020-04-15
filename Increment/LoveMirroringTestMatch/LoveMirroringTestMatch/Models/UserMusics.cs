@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace LoveMirroringTestMatch.Models
 {
-    public partial class UsersPreferences
+    public partial class UserMusics
     {
-        public short PreferenceId { get; set; }
         public string Id { get; set; }
+        public short MusicId { get; set; }
 
         public virtual AspNetUsers IdNavigation { get; set; }
-        public virtual Preferences Preference { get; set; }
+        public virtual Musics Music { get; set; }
     }
 }
