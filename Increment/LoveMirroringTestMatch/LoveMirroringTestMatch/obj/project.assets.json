@@ -8911,20 +8911,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kingh\\.nuget\\packages\\": {}
+    "C:\\Users\\zibeu\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Bureau\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\LoveMirroringTestMatch.csproj",
+      "projectUniqueName": "C:\\DEV\\Love-Mirroring\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\LoveMirroringTestMatch.csproj",
       "projectName": "LoveMirroringTestMatch",
-      "projectPath": "D:\\Bureau\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\LoveMirroringTestMatch.csproj",
-      "packagesPath": "C:\\Users\\kingh\\.nuget\\packages\\",
-      "outputPath": "D:\\Bureau\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\obj\\",
+      "projectPath": "C:\\DEV\\Love-Mirroring\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\LoveMirroringTestMatch.csproj",
+      "packagesPath": "C:\\Users\\zibeu\\.nuget\\packages\\",
+      "outputPath": "C:\\DEV\\Love-Mirroring\\Increment\\LoveMirroringTestMatch\\LoveMirroringTestMatch\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\zibeu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8992,7 +8997,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
